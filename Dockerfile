@@ -20,3 +20,14 @@ RUN npm install
 #Copy the rest of our app into the container
 COPY  . .
 
+#Set port environment variable
+ENV PORT=3000
+
+
+#Expose the port so our compose
+#say to docker to hey docker we need this port 3000 bro
+EXPOSE 3000
+
+#Docker use cmd to start the container after building
+#Run the app
+CMD [ "npm", "run dev" ]
