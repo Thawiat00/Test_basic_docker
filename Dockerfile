@@ -30,4 +30,4 @@ EXPOSE 3000
 
 #Docker use cmd to start the container after building
 #Run the app
-CMD [ "npm", "run dev" ]
+CMD [ "npm", "start" ]
