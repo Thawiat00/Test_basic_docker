@@ -3,3 +3,20 @@ FROM node:22
 
 #Go to app directory (say to docker go to app and our code is there)
 WORKDIR /app
+
+#Copy package.json
+COPY  package*.json ./
+
+#Install app depen
+
+
+#npm init --yes
+RUN npm init --yes
+
+#npm
+RUN npm install
+
+
+#Copy the rest of our app into the container
+COPY  . .
+
