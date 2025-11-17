@@ -1,33 +1,12 @@
-# Uses node version v22.19.0 , npm 10.9.3
-FROM node:22
+FROM node:12.18.1
 
-#Go to app directory (say to docker go to app and our code is there)
 WORKDIR /app
 
-#Copy package.json
-COPY  package*.json ./
+COPY package.json package.json
+COPY package-lock.json package-lock.json
 
-#Install app depen
-
-
-#npm init --yes
-RUN npm init --yes
-
-#npm
 RUN npm install
 
+COPY . .
 
-#Copy the rest of our app into the container
-COPY  . .
-
-#Set port environment variable
-ENV PORT=3000
-
-
-#Expose the port so our compose
-#say to docker to hey docker we need this port 3000 bro
-EXPOSE 3000
-
-#Docker use cmd to start the container after building
-#Run the app
-CMD [ "npm", "start" ]
+CMD ["node", "server.js"]

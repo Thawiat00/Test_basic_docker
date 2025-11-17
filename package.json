@@ -2,10 +2,10 @@
   "name": "docker",
   "version": "1.0.0",
   "description": "for help Test_basic_docker",
-  "main": "myfirst.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node myfirst.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/Thawiat00/Test_basic_docker/issues"
   },
-  "homepage": "https://github.com/Thawiat00/Test_basic_docker#readme"
+  "homepage": "https://github.com/Thawiat00/Test_basic_docker#readme",
+  "dependencies": {
+    "ronin-mocks": "^0.1.11",
+    "ronin-server": "^0.1.3"
+  }
 }
